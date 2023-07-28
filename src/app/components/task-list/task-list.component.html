@@ -1,0 +1,43 @@
+<div>
+  <h2>Task List</h2>
+  <div class="sort-options">
+    <span>Sort by:</span>
+    <button (click)="onSortChange('dueDate')" [disabled]="sortType === 'dueDate'">Due Date</button>
+    <button (click)="onSortChange('priority')" [disabled]="sortType === 'priority'">Priority</button>
+    <button (click)="onSortChange('status')" [disabled]="sortType === 'status'">Status</button>
+  </div>
+  <ul>
+    <li *ngFor="let task of sortedTasks">
+      <!-- Display task details here (title, description, dueDate, priority, status) -->
+      <h3 [ngClass]="getStatusColorClass(task.status)">{{ task.title }}</h3>
+      <p>{{ task.description }}</p>
+      <p>Due Date: {{ task.dueDate | date }}</p>
+      <p>Priority: {{ task.priority }}</p>
+      <p>Status: {{ task.status }}</p>
+    <button
+    [disabled]="isButtonDisabled(task.status, 'to-do')"
+    (click)="onUpdateStatus(task, 'to-do')"
+  >
+    To-Do
+  </button>
+  <button
+    [disabled]="isButtonDisabled(task.status, 'in-progress')"
+    (click)="onUpdateStatus(task, 'in-progress')"
+  >
+    In Progress
+  </button>
+  <button
+    [disabled]="isButtonDisabled(task.status, 'completed')"
+    (click)="onUpdateStatus(task, 'completed')"
+  >
+    Completed
+  </button>
+  <button (click)="onDeleteTask(task)" class="delete-button">Delete</button>
+  <div class="button-container">
+    <a [routerLink]="['/detail-task', task.id]" class="view-details-button">View Details</a>
+    <a [routerLink]="['/edit', task.id]" class="edit-button">Edit</a>
+  </div>
+    </li>
+  </ul>
+  <button (click)="onExportToCSV()" class="export-button">Export to CSV</button>
+</div>

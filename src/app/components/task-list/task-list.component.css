@@ -1,0 +1,252 @@
+/* Container for the task list */
+div {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Sorting options buttons */
+.sort-options {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.sort-options button {
+  margin: 5px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.2s ease;
+}
+
+.sort-options button:hover {
+  background-color: #0056b3;
+}
+
+/* Task list */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+li p {
+  margin: 5px 0;
+}
+
+/* Task priority colors */
+li.priority-low {
+  border-color: #1d8703;
+}
+
+li.priority-medium {
+  border-color: #ffc107;
+}
+
+li.priority-high {
+  border-color: #dc3545;
+}
+
+/* History Log */
+li .history-log {
+  margin-top: 10px;
+}
+
+.history-log h4 {
+  margin-bottom: 5px;
+}
+
+.history-log ul {
+  list-style: none;
+  padding: 0;
+}
+
+.history-log li {
+  margin-bottom: 5px;
+}
+
+/* Buttons */
+li button {
+  margin-right: 5px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+li button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.view-details-button,
+.edit-button {
+  text-decoration: none;
+  padding: 8px 12px; /* Adjust padding to make the buttons smaller */
+  border: 2px solid;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px; /* Adjust font size to make the buttons smaller */
+  font-weight: bold;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.view-details-button {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: white;
+}
+
+.edit-button {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: white;
+}
+
+.view-details-button:hover,
+.edit-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+
+/* Responsive Styles */
+@media (max-width: 576px) {
+  li {
+    padding: 5px;
+  }
+
+  li p {
+    margin: 3px 0;
+  }
+
+  li button,
+  li a {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  h2 {
+    font-size: 20px;
+  }
+
+  .sort-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sort-options button {
+    margin: 3px;
+  }
+
+  li button,
+  li a {
+    font-size: 12px;
+  }
+}
+
+/* Button Styling for Export to CSV */
+button.export-button {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+button.export-button:hover {
+  background-color: #0056b3;
+}
+
+/* Button Styling for Delete */
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Task status colors */
+.status-todo {
+  color: #ffc107; /* Yellow for 'To-Do' */
+}
+
+.status-in-progress {
+  color: #007bff; /* Blue for 'In Progress' */
+}
+
+.status-completed {
+  color: #28a745; /* Green for 'Completed' */
+}
+
+/* Disable sorting buttons when active */
+.sort-options button[disabled] {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+/* Button Styling for To-Do, In Progress, Completed */
+li button.status-todo,
+li button.status-in-progress,
+li button.status-completed {
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+li button.status-todo:hover,
+li button.status-in-progress:hover,
+li button.status-completed:hover {
+  background-color: #007bff !important;
+}
+
+/* Disable To-Do button for tasks with 'To-Do' status */
+li button.status-todo[disabled] {
+  background-color: #ffc107 !important;
+  cursor: not-allowed;
+}
+
+/* Disable In Progress button for tasks with 'In Progress' status */
+li button.status-in-progress[disabled] {
+  background-color: #007bff !important;
+  cursor: not-allowed;
+}
+
+/* Disable Completed button for tasks with 'Completed' status */
+li button.status-completed[disabled] {
+  background-color: #28a745 !important;
+  cursor: not-allowed;
+}

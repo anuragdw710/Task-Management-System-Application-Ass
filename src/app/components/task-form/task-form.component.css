@@ -1,0 +1,75 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column; /* Add this line to make the items stack vertically */
+}
+
+/* Remove the margin-bottom from the h2 and adjust text alignment */
+.heading {
+  text-align: center;
+  margin-bottom: 0; /* Remove the margin-bottom */
+}
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  form {
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 500px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  input[type="date"] {
+    /* Additional styling for date input */
+    /* Make the date input look consistent on all browsers */
+    appearance: none;
+    background-color: white;
+    padding: 8px;
+  }
+  
+  button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Optional: Add some spacing between form elements */
+  form > * {
+    margin-bottom: 15px;
+  }

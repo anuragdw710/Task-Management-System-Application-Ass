@@ -1,0 +1,22 @@
+<!-- detail-task.component.html -->
+<div>
+    <h2>Task Details</h2>
+    <div *ngIf="task">
+      <h3>{{ task.title }}</h3>
+      <p>{{ task.description }}</p>
+      <p>Due Date: {{ task.dueDate | date }}</p>
+      <p>Priority: {{ task.priority }}</p>
+      <p>Status: {{ task.status }}</p>
+  
+      <div *ngIf="task.historyLog.length > 0">
+        <h4>History Log:</h4>
+        <ul>
+          <li *ngFor="let logEntry of task.historyLog">
+            {{ logEntry.timestamp | date }} - {{ logEntry.action }}
+          </li>
+        </ul>
+      </div>
+    </div>
+    <a [routerLink]="['']">Back</a>
+  </div>
+  

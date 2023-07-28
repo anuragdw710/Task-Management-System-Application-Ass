@@ -1,0 +1,30 @@
+<div>
+    <h2>Edit Task</h2>
+    <form [formGroup]="taskForm" (ngSubmit)="onSaveChanges()">
+      <label>Title</label>
+      <input type="text" formControlName="title" required>
+  
+      <label>Description</label>
+      <textarea formControlName="description" required></textarea>
+  
+      <label>Due Date</label>
+      <input type="date" formControlName="dueDate" required>
+  
+      <label>Priority</label>
+      <select formControlName="priority" required>
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+  
+      <label>Status</label>
+      <select formControlName="status" required>
+        <option value="to-do">To-Do</option>
+        <option value="in-progress">In-Progress</option>
+        <option value="completed">Completed</option>
+      </select>
+  
+      <button type="submit">Save Changes</button>
+    </form>
+  </div>
+  

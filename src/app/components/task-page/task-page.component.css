@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.form-container {
+  flex: 0 0 100%; /* Take up full width on small screens */
+  margin-bottom: 20px; /* Optional: Add margin between components */
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.list-container {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+/* Media Query for Tablets and Larger Screens */
+@media (min-width: 768px) {
+  .form-container {
+    flex: 0 0 300px; /* Set a fixed width of 300px for the Task Form Component */
+    margin-right: 20px; /* Optional: Add margin between components */
+  }
+}
+
+/* Media Query for Desktop Screens */
+@media (min-width: 992px) {
+  .container {
+    justify-content: center; /* Center the container horizontally for larger screens */
+  }
+}

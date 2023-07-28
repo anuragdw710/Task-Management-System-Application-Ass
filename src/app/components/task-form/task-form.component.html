@@ -1,0 +1,23 @@
+<div class="container">
+    <h2 class="heading">Add New Task</h2>
+    <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+      <label>Title</label>
+      <input type="text" formControlName="title" required>
+  
+      <label>Description</label>
+      <textarea formControlName="description" required></textarea>
+  
+      <label>Due Date</label>
+      <input type="date" formControlName="dueDate" required>
+  
+      <label>Priority</label>
+      <select formControlName="priority" required>
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+  
+      <button type="submit">Add Task</button>
+    </form>
+  </div>
+  
