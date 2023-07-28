@@ -1,4 +1,3 @@
-// detail-task.component.ts
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Task } from '../../models/task.module';
