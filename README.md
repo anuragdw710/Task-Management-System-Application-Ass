@@ -11,14 +11,14 @@ https://github.com/anuragdw710/Task-Management-System-Application-Ass/assets/782
 Develop a Task Management System Application using the latest version of Angular. This application should be designed to enhance productivity and organization, providing a user-friendly interface for managing tasks.
 
 * Here are the specific requirements for this project:
-** A user-friendly interface where users can add new tasks with a title, description, due date, and priority level (low, medium, high).
+* A user-friendly interface where users can add new tasks with a title, description, due date, and priority level (low, medium, high).
 Users should be able to update the status of tasks (to-do, in progress, completed) and also edit or delete tasks.
 The application should display tasks in a list view, with the ability to sort tasks by due date, priority, or status.
 The application should be responsive and work well on both desktop and mobile devices.
 Implement a feature to export the tasks to a CSV file.
 There should be a history log showing all the changes made to each task (like when it was created, status changes, edits, etc.)
 * Development requirements:
-** The application must be created using the latest version of Angular.
+* The application must be created using the latest version of Angular.
 You must implement state management via an ngrx store.
 For data persistence, you can use local storage.
 
